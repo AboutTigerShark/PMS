@@ -7,27 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72ddc271-89a6-4767-b9d2-380d79cefdce" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/common/SpringExceptionResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/common/SpringExceptionResolver.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/controller/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/controller/test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/ws.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/spring-servlet.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/common/SpringExceptionResolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/common/SpringExceptionResolver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/controller/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/controller/test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/ws.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/lib/logback-classic-1.1.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/lib/logback-core-1.1.8.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/lib/lombok-1.16.12.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/spring-servlet.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/PMS/WEB-INF/spring-servlet.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wb/common/SpringExceptionResolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wb/common/SpringExceptionResolver.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wb/controller/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wb/controller/test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wb/dao/TestDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wb/dao/TestDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ws.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/common/ApplicationContextHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/common/ApplicationContextHelper.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,9 +29,9 @@
       <list>
         <option value="Tag Library Descriptor" />
         <option value="FxmlFile" />
-        <option value="Class" />
         <option value="Jsp File" />
         <option value="spring-beans.schema" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -90,16 +72,19 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\mycode\PMS\generator" />
+      <recent name="D:\mycode\PMS\src\main\webapp\WEB-INF" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.wb.common" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\mycode\PMS\target\classes\com\wb\common" />
       <recent name="D:\mycode\PMS\src\main\java\com\wb\model" />
       <recent name="D:\mycode\PMS\src\main\java\com\wb\mapper" />
       <recent name="D:\mycode\PMS\src\main\java\com\wb\dao" />
       <recent name="D:\mycode\PMS\generator\src" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\mycode\PMS\generator" />
-      <recent name="D:\mycode\PMS\src\main\webapp\WEB-INF" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -214,6 +199,7 @@
       <workItem from="1576865839257" duration="276000" />
       <workItem from="1576866142668" duration="1944000" />
       <workItem from="1576868120607" duration="1992000" />
+      <workItem from="1576929809661" duration="3837000" />
     </task>
     <servers />
   </component>
