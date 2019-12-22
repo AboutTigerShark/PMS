@@ -8,6 +8,30 @@
   <component name="ChangeListManager">
     <list default="true" id="72ddc271-89a6-4767-b9d2-380d79cefdce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/common/SpringExceptionResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/common/SpringExceptionResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/controller/test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/controller/test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/dao/TestDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/mapper/SysAclMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/mapper/SysAclModuleMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/mapper/SysDeptMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/mapper/SysLogMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/mapper/SysRoleAclMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/mapper/SysRoleMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/mapper/SysRoleUserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/mapper/SysUserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/sss.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/common/ApplicationContextHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/common/ApplicationContextHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/controller/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/controller/test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/dao/TestDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/mapper/sss.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/applicationContext.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/applicationContext.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wb/common/ApplicationContextHelper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wb/common/ApplicationContextHelper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wb/common/SpringExceptionResolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wb/common/SpringExceptionResolver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wb/controller/test.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wb/controller/test.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wb/dao/TestDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/sss.xml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -63,26 +87,27 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/target/classes/com/wb/common" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/mapper" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.41724136" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\mycode\PMS\generator" />
-      <recent name="D:\mycode\PMS\src\main\webapp\WEB-INF" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.wb.common" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\mycode\PMS\src\main\resources\mapper" />
       <recent name="D:\mycode\PMS\target\classes\com\wb\common" />
       <recent name="D:\mycode\PMS\src\main\java\com\wb\model" />
       <recent name="D:\mycode\PMS\src\main\java\com\wb\mapper" />
       <recent name="D:\mycode\PMS\src\main\java\com\wb\dao" />
-      <recent name="D:\mycode\PMS\generator\src" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.wb.param" />
+      <recent name="com.wb.common" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\mycode\PMS\generator" />
+      <recent name="D:\mycode\PMS\src\main\webapp\WEB-INF" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -199,6 +224,7 @@
       <workItem from="1576868120607" duration="1992000" />
       <workItem from="1576929809661" duration="3837000" />
       <workItem from="1576953216912" duration="2694000" />
+      <workItem from="1577010812676" duration="9267000" />
     </task>
     <servers />
   </component>

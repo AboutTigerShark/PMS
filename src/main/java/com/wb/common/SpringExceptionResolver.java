@@ -1,5 +1,6 @@
 package com.wb.common;
 
+import com.wb.exception.ParamException;
 import com.wb.exception.PermissionException;
 import org.springframework.web.servlet.HandlerExceptionResolver;
 import org.springframework.web.servlet.ModelAndView;
@@ -15,7 +16,7 @@ public class SpringExceptionResolver implements HandlerExceptionResolver {
         ModelAndView mv;
         String defaultMsg = "System error"; //默认错误信息
         if(url.endsWith(".json")){
-            if(e instanceof PermissionException){
+            if(e instanceof PermissionException || e instanceof ParamException){
                 JsonData result = JsonData.fail(e.getMessage());
                 mv = new ModelAndView("jsonView", result.toMap());
             }else {
