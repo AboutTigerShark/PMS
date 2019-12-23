@@ -8,8 +8,10 @@
   <component name="ChangeListManager">
     <list default="true" id="72ddc271-89a6-4767-b9d2-380d79cefdce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/dao/SysDeptMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/dao/SysDeptMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/service/SysDeptService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/service/SysDeptService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/dto/DeptLevelDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/dto/DeptLevelDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/service/SysTreeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/service/SysTreeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SysDeptMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SysDeptMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/wb/common/SpringExceptionResolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wb/common/SpringExceptionResolver.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -204,6 +206,7 @@
       <workItem from="1576953216912" duration="2694000" />
       <workItem from="1577010812676" duration="16545000" />
       <workItem from="1577099474245" duration="4557000" />
+      <workItem from="1577115278784" duration="11923000" />
     </task>
     <servers />
   </component>

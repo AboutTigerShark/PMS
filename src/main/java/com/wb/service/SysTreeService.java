@@ -12,6 +12,7 @@ import com.wb.util.LevelUtil;
 import org.apache.commons.collections.CollectionUtils;
 import org.springframework.stereotype.Service;
 
+
 import javax.annotation.Resource;
 import java.util.Collections;
 import java.util.Comparator;
@@ -20,14 +21,14 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
-public class SysTreeService<SysCoreService> {
+public class SysTreeService {
 
     @Resource
     private SysDeptMapper sysDeptMapper;
     @Resource
     private SysAclModuleMapper sysAclModuleMapper;
-    @Resource
-    private SysCoreService sysCoreService;
+//    @Resource
+//    private SysCoreService sysCoreService;
     @Resource
     private SysAclMapper sysAclMapper;
 
@@ -140,9 +141,10 @@ public class SysTreeService<SysCoreService> {
 //    }
 
     public List<DeptLevelDto> deptTree() {
-        List<SysDept> deptList = sysDeptMapper.getAllDept();
+        List<SysDept> deptList = sysDeptMapper.getAllDept(); //数据库中取得所有的部门放入deptList
 
         List<DeptLevelDto> dtoList = Lists.newArrayList();
+        //将deptList遍历后拷贝为DeptLevelDto对象放入dtoList中.
         for (SysDept dept : deptList) {
             DeptLevelDto dto = DeptLevelDto.adapt(dept);
             dtoList.add(dto);
@@ -150,20 +152,23 @@ public class SysTreeService<SysCoreService> {
         return deptListToTree(dtoList);
     }
 
+    //将传入的deptLevelList遍历
     public List<DeptLevelDto> deptListToTree(List<DeptLevelDto> deptLevelList) {
-        if (CollectionUtils.isEmpty(deptLevelList)) {
+        if (CollectionUtils.isEmpty(deptLevelList)) { //判断deptLevelList是否为空
             return Lists.newArrayList();
         }
         // level -> [dept1, dept2, ...] Map<String, List<Object>>
-        Multimap<String, DeptLevelDto> levelDeptMap = ArrayListMultimap.create();
+        Multimap<String, DeptLevelDto> levelDeptMap = ArrayListMultimap.create(); //Multimap提供一个键对应多个值的用法,有ListMultimap，SetMultimap和SortedSetMultimap多种类型
         List<DeptLevelDto> rootList = Lists.newArrayList();
 
+        //将deptLevelList遍历后做两个操作
         for (DeptLevelDto dto : deptLevelList) {
-            levelDeptMap.put(dto.getLevel(), dto);
-            if (LevelUtil.ROOT.equals(dto.getLevel())) {
+            levelDeptMap.put(dto.getLevel(), dto);  //1:将Level(部门层级)为键,dto(部门对象)为值传入levelDeptMap中
+            if (LevelUtil.ROOT.equals(dto.getLevel())) { //如果部门的层级为ROOT(0),则添加到rootList中
                 rootList.add(dto);
             }
         }
+
         // 按照seq从小到大排序
         Collections.sort(rootList, new Comparator<DeptLevelDto>() {
             public int compare(DeptLevelDto o1, DeptLevelDto o2) {
@@ -178,6 +183,7 @@ public class SysTreeService<SysCoreService> {
     // level:0, 0, all 0->0.1,0.2
     // level:0.1
     // level:0.2
+    //递归算法生成树
     public void transformDeptTree(List<DeptLevelDto> deptLevelList, String level, Multimap<String, DeptLevelDto> levelDeptMap) {
         for (int i = 0; i < deptLevelList.size(); i++) {
             // 遍历该层的每个元素
@@ -197,6 +203,7 @@ public class SysTreeService<SysCoreService> {
         }
     }
 
+    //排序规则
     public Comparator<DeptLevelDto> deptSeqComparator = new Comparator<DeptLevelDto>() {
         public int compare(DeptLevelDto o1, DeptLevelDto o2) {
             return o1.getSeq() - o2.getSeq();
