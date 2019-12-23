@@ -34,6 +34,7 @@ public class SysDeptService {
             sysDept.setOperateIp("127.0.0.1");
             sysDept.setOperateTime(new Date());
             sysDeptMapper.insertSelective(sysDept); //
+
         }
     }
 
