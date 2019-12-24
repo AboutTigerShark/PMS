@@ -38,4 +38,11 @@ public class SysDeptController {
         return JsonData.success(deptLevelDtoList);
     }
 
+    @RequestMapping("/update.json")
+    @ResponseBody
+    public JsonData update(DeptParam deptParam){
+        sysDeptService.update(deptParam);
+        return JsonData.success();
+    }
+
 }
