@@ -77,8 +77,8 @@ public class SysDeptService {
             if(CollectionUtils.isNotEmpty(deptList)){
                 for(SysDept sysDept : deptList){
                     String level = sysDept.getLevel();
-                    if(level.indexOf(oldLevelPrefix) == 0){
-                        level = newLevelPrefix + level.substring(oldLevelPrefix.length());
+                    if(level.indexOf(oldLevelPrefix) == 0){  //indexOf:返回在字符串第一次出现的索引
+                        level = newLevelPrefix + level.substring(oldLevelPrefix.length()); //substring
                         sysDept.setLevel(level);
                     }
                 }

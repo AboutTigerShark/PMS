@@ -8,23 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="72ddc271-89a6-4767-b9d2-380d79cefdce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/controller/SysDeptController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/controller/SysDeptController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/dao/SysDeptMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/dao/SysDeptMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/param/DeptParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/param/DeptParam.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/service/SysDeptService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/service/SysDeptService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SysDeptMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SysDeptMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/controller/SysDeptController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/controller/SysDeptController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/dao/SysDeptMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/dao/SysDeptMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/param/DeptParam.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/param/DeptParam.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/service/SysDeptService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/service/SysDeptService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/service/SysTreeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/service/SysTreeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/mapper/SysDeptMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/mapper/SysDeptMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wb/controller/SysDeptController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wb/controller/SysDeptController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wb/dao/SysDeptMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wb/dao/SysDeptMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wb/param/DeptParam.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wb/param/DeptParam.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wb/service/SysDeptService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wb/service/SysDeptService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wb/service/SysTreeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wb/service/SysTreeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SysDeptMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/SysDeptMapper.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -221,6 +205,7 @@
       <workItem from="1577099474245" duration="4557000" />
       <workItem from="1577115278784" duration="11923000" />
       <workItem from="1577183697052" duration="10888000" />
+      <workItem from="1577297219366" duration="4133000" />
     </task>
     <servers />
   </component>
