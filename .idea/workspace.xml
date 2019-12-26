@@ -8,7 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="72ddc271-89a6-4767-b9d2-380d79cefdce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/service/SysDeptService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/service/SysDeptService.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,27 +63,27 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/mapper" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.41724136" />
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\mycode\PMS\src\main\resources\mapper" />
-      <recent name="D:\mycode\PMS\target\classes\com\wb\common" />
-      <recent name="D:\mycode\PMS\src\main\java\com\wb\model" />
-      <recent name="D:\mycode\PMS\src\main\java\com\wb\mapper" />
-      <recent name="D:\mycode\PMS\src\main\java\com\wb\dao" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\mycode\PMS\generator" />
+      <recent name="D:\mycode\PMS\src\main\webapp\WEB-INF" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.wb.param" />
       <recent name="com.wb.common" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\mycode\PMS\generator" />
-      <recent name="D:\mycode\PMS\src\main\webapp\WEB-INF" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\mycode\PMS\src\main\webapp" />
+      <recent name="D:\mycode\PMS\src\main\resources\mapper" />
+      <recent name="D:\mycode\PMS\target\classes\com\wb\common" />
+      <recent name="D:\mycode\PMS\src\main\java\com\wb\model" />
+      <recent name="D:\mycode\PMS\src\main\java\com\wb\mapper" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -205,7 +204,8 @@
       <workItem from="1577099474245" duration="4557000" />
       <workItem from="1577115278784" duration="11923000" />
       <workItem from="1577183697052" duration="10888000" />
-      <workItem from="1577297219366" duration="4133000" />
+      <workItem from="1577297219366" duration="4206000" />
+      <workItem from="1577386990102" duration="665000" />
     </task>
     <servers />
   </component>
