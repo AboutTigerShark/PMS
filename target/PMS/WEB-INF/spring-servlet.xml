@@ -18,11 +18,12 @@
     <context:component-scan base-package="com.wb.controller" />
     <context:component-scan base-package="com.wb.service" />
 
-    <!--    <mvc:resources location="/js/" mapping="/js/**"/>-->
-    <!--    <mvc:resources location="/css/" mapping="/css/**"/>-->
-    <!--    <mvc:resources location="/bootstrap3.3.5/" mapping="/bootstrap3.3.5/**"/>-->
-    <!--    <mvc:resources location="/assets/" mapping="/assets/**"/>-->
-    <!--    <mvc:resources location="/ztree/" mapping="/ztree/**"/>-->
+    <!-- 静态文件路径声明 -->
+    <mvc:resources location="/js/" mapping="/js/**"/>
+    <mvc:resources location="/css/" mapping="/css/**"/>
+    <mvc:resources location="/bootstrap3.3.5/" mapping="/bootstrap3.3.5/**"/>
+    <mvc:resources location="/assets/" mapping="/assets/**"/>
+    <mvc:resources location="/ztree/" mapping="/ztree/**"/>
 
     <bean class="com.wb.common.ApplicationContextHelper" lazy-init="false" />
 
