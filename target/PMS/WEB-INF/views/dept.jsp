@@ -25,7 +25,7 @@
                 <i class="ace-icon fa fa-plus-circle orange bigger-130 dept-add"></i>
             </a>
         </div>
-        <div id="deptList">
+        <div id="deptList1">
         </div>
     </div>
     <div class="col-sm-9">
@@ -206,7 +206,7 @@
                     if(result.ret){
                         deptList = result.data;
                         var rendered = Mustache.render(deptListTemplate, {deptList: result.data});
-                        // $('#deptList').html(rendered);
+                        $('#deptList1').html(rendered);
                         recursiveRenderDept(result.data); //第一层递归
                     }else {
                         showMessage("加载部门列表", result.msg, false);

@@ -25,7 +25,7 @@
                 <i class="ace-icon fa fa-plus-circle orange bigger-130 dept-add"></i>
             </a>
         </div>
-        <div id="deptList">
+        <div id="deptList1">
         </div>
     </div>
     <div class="col-sm-9">
@@ -192,6 +192,8 @@
     $(function () {
         var deptList; //缓存树形部门列表
         var deptMap = {}; //缓存map格式的部门信息
+        var optionStr = ""; //选项中的数据
+        var lastClickDeptId = -1; //最后一次点击的部门Id
         
         var deptListTemplate = $('#deptListTemplate').html();
         Mustache.parse(deptListTemplate);
@@ -206,7 +208,7 @@
                     if(result.ret){
                         deptList = result.data;
                         var rendered = Mustache.render(deptListTemplate, {deptList: result.data});
-                        $('#deptList').html(rendered);
+                        $('#deptList1').html(rendered);  //渲染到id为deptList1的标签上
                         recursiveRenderDept(result.data); //第一层递归
                     }else {
                         showMessage("加载部门列表", result.msg, false);
@@ -230,9 +232,156 @@
 
         //绑定部门点击事件
         function bindDepttClick() {
+            //1.点击部门编辑按钮
+            $(".dept-edit").click(function (e) {
+                e.preventDefault();
+                e.stopPropagation();
+                var deptId = $(this).attr("data-id"); //取出当前元素的部门Id
+                // handleDeptSelected(deptId);
+                $('#dialog-dept-form').dialog({
+                    model: true,
+                    title: "编辑部门",
+                    open: function (event, ui) {
+                        $(".ui-dialog-titlebar-close", $(this).parent()).hide(); //默认关闭属性隐藏
+                        optionStr = "<option value='0'>-</option>";
+                        recursiveRenderDeptSelect(deptList, 1); //调用递归第一层
+                        $("#deptForm")[0].reset();
+                        $("#parentId").html(optionStr);
+                        $("#deptId").valid(deptId);
+                        var targetDept = deptMap[deptId];
+                        if(targetDept){ //在弹出来的dialog中填充字段
+                            $("#parentId").val(targetDept.parentId);
+                            $("#deptName").val(targetDept.name);
+                            $("#deptSeq").val(targetDept.seq);
+                            $("#deptRemark").valid(targetDept.remark);
+                        }
+                    },
+                    button: {
+                        "更新": function (e) {
+                            e.preventDefault();
+                            updateDept(false, function (data) {
+                                $("#dialog-dept-form").dialog("close");
+                            }, function (data) {
+                                showMessage("更新部门", data.msg, false);
+                            })
+                        },
+                        "取消": function () {
+                            $("#dialog-dept-form").dialog("close");
+                        }
+                    }
+                })
+            });
+
+            //2.点击部门删除按钮(需要验证有没有用户才能删除)
+            $(".dept-delete").click(function () {
+                e.preventDefault();
+                e.stopPropagation();
+                var deptId = $(this).attr("data-id");
+                var deptName = $(this).attr("data-name");
+                if(confirm("确定要删除部门["+ deptName + "]吗?")){
+                    //TODO:
+                    console.log("delete dept:" + deptName);
+                }
+            });
+
+            $(".dept-name").click(function () {
+                e.preventDefault();
+                e.stopPropagation();
+                var deptId = $(this).attr("data-id");
+                handleDeptSelected(deptId);
+            });
+            //3.点击部门名称加载用户列表
 
         }
 
+        //处理点击事件的函数?
+        function handleDeptSelected(deptId){
+            if(lastClickDeptId == -1){
+                var lastDept = $("#dept_" + lastClickDeptId + " .dd2-content:first");
+                lastDept.removeClass("btn-yellow");
+                lastDept.removeClass("no-hover");
+            }
+            var currentDept = $("#dept_" + deptId + " .dd2-content:first");
+            lastDept.addClass("btn-yellow");
+            lastDept.addClass("no-hover");
+            lastClickDeptId = deptId;
+            loadUserList(deptId);
+        }
+
+        function loadUserList(deptId){
+            //TODO:
+            console.log("load userlist, deptId:" + deptId);
+        }
+
+
+        //部门添加的按钮点击事件
+        $('.dept-add').click(function () {
+            $('#dialog-dept-form').dialog({
+                model: true,
+                title: "新增部门",
+                open: function (event, ui) {
+                    $(".ui-dialog-titlebar-close", $(this).parent()).hide(); //默认关闭属性隐藏
+                    optionStr = "<option value='0'>-</option>";
+                    recursiveRenderDeptSelect(deptList, 1); //调用递归第一层
+                    $("#deptForm")[0].reset();
+                    $("#parentId").html(optionStr);
+                },
+                button: {
+                    "添加": function (e) {
+                        e.preventDefault();
+                        updateDept(true, function (data) {
+                            $("#dialog-dept-form").dialog("close");
+                        }, function (data) {
+                            showMessage("新增部门", data.msg, false);
+                        })
+                    },
+                    "取消": function () {
+                        $("#dialog-dept-form").dialog("close");
+                    }
+                }
+            })
+        });
+
+        function recursiveRenderDeptSelect(deptList, level) {
+            level = level | 0;
+            if(deptList && deptList.length > 0){
+                $(deptList).each(function (i, dept) {
+                    deptMap[dept.id] = dept;
+                    var blank = "";
+                    if(level > 1){
+                        for (var j = 3; j <= level; j++){
+                            blank += "..";
+                        }
+                        blank += "∟";
+                    }
+                    optionStr += Mustanche.render("<option value='{{id}}'>{{name}}</option>", {id: dept.id, name: blank + dept.name});
+                    if(dept.deptList && dept.deptList.length > 0){
+                        recursiveRenderDeptSelect(dept.deptList, level + 1);
+                    }
+                })
+            }
+        }
+
+        function updateDept(isCreate, successCallback, failCallback) {
+            $.ajax({
+                url: isCreate ? "/sys/dept/save.json" : "/sys/dept/update.json",
+                data: $("#deptForm").serializeArray(),
+                type: 'POST',
+                success: function (result) {
+                    if(result.ret){
+                        loadDeptTree();
+                        if(successCallback){
+                            successCallback(result);
+                        }
+                    }else {
+                        if(failCallback){
+                            failCallback(result);
+                        }
+                    }
+                }
+            })
+        }
+        
     });
 </script>
 
