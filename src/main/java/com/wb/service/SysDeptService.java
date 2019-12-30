@@ -34,11 +34,11 @@ public class SysDeptService {
                     .seq(deptParam.getSeq())
                     .remark(deptParam.getRemark())
                     .build();
-            sysDept.setLevel(LevelUtil.calculateLevel(getLevel(deptParam.getParentId()), deptParam.getId()));
+            sysDept.setLevel(LevelUtil.calculateLevel(getLevel(deptParam.getParentId()), deptParam.getParentId()));
             sysDept.setOperator("System"); //TODO
             sysDept.setOperateIp("127.0.0.1");
             sysDept.setOperateTime(new Date());
-            sysDeptMapper.insertSelective(sysDept); //
+            sysDeptMapper.insertSelective(sysDept);
 
         }
     }
@@ -82,6 +82,7 @@ public class SysDeptService {
                         sysDept.setLevel(level);
                     }
                 }
+                sysDeptMapper.batchUpdateLevel(deptList);
             }
         }
         sysDeptMapper.updateByPrimaryKey(after_update);
