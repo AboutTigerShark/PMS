@@ -8,9 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="72ddc271-89a6-4767-b9d2-380d79cefdce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/service/SysDeptService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/service/SysDeptService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/dept.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/dept.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/views/dept.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/PMS/WEB-INF/views/dept.jsp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -213,7 +210,8 @@
       <workItem from="1577634503877" duration="23000" />
       <workItem from="1577635348378" duration="6883000" />
       <workItem from="1577642672170" duration="279000" />
-      <workItem from="1577704911793" duration="16293000" />
+      <workItem from="1577704911793" duration="16488000" />
+      <workItem from="1577882160955" duration="703000" />
     </task>
     <servers />
   </component>
