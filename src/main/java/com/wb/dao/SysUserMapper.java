@@ -1,7 +1,10 @@
 package com.wb.dao;
 
+import com.wb.beans.PageQuery;
 import com.wb.model.SysUser;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 public interface SysUserMapper {
     int deleteByPrimaryKey(Integer id);
@@ -24,5 +27,6 @@ public interface SysUserMapper {
 
     int countByDeptId(@Param("deptId") int deptId);
 
+    List<SysUser> getPageByDeptId(@Param("deptId") int deptId,@Param("page") PageQuery page);
 
 }

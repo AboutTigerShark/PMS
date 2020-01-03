@@ -1,5 +1,7 @@
 package com.wb.controller;
 
+import com.wb.beans.PageQuery;
+import com.wb.beans.PageResult;
 import com.wb.common.JsonData;
 import com.wb.model.SysUser;
 import com.wb.param.UserParam;
@@ -11,6 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @Controller
 @RequestMapping("/sys/user")
@@ -33,6 +36,13 @@ public class SysUserController {
     public JsonData update(UserParam userParam){
         sysUserService.update(userParam);
         return JsonData.success();
+    }
+
+    @RequestMapping("/list.json")
+    @ResponseBody
+    public JsonData list(int deptId, PageQuery pageQuery){
+        PageResult<SysUser> result = sysUserService.getPageByDeptId(deptId, pageQuery);
+        return JsonData.success(result);
     }
 
 }
