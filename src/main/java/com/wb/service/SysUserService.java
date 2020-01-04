@@ -9,6 +9,7 @@ import com.wb.model.SysUser;
 import com.wb.param.UserParam;
 import com.wb.util.BeanValidator;
 import com.wb.util.MD5Util;
+import com.wb.util.MailUtil;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -44,6 +45,9 @@ public class SysUserService {
         sysUser.setOperator("System"); //TODO
         sysUser.setOperateIp("127.0.0.1");
         sysUser.setOperateTime(new Date());
+
+        //TODO:MailUtil.send(),用于发送邮件.
+
         sysUserMapper.insertSelective(sysUser);
 
     }
