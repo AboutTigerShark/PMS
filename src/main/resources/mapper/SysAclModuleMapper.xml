@@ -149,4 +149,21 @@
       operate_ip = #{operateIp,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+  <select id="getAllAclModule" resultMap="BaseResultMap">
+    SELECT <include refid="Base_Column_List" />
+    FROM sys_acl_module
+  </select>
+
+  <select id="countByNameAndParentId" parameterType="map" resultType="int">
+    SELECT count(1)
+    FROM sys_acl_module
+    WHERE name = #{name}
+    <if test="parentId != null">
+      AND parent_id = #{parentId}
+    </if>
+    <if test="id != null">
+      AND id != #{id}
+    </if>
+  </select>
 </mapper>

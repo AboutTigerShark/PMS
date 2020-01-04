@@ -7,9 +7,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="72ddc271-89a6-4767-b9d2-380d79cefdce" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/wb/dto/AclModuleLevelDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/service/SysUserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/service/SysUserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/controller/SysAclModuleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/controller/SysAclModuleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/dao/SysAclModuleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/dao/SysAclModuleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/dto/AclModuleDto.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/model/SysAclModule.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/model/SysAclModule.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/param/AclModuleParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/param/AclModuleParam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/service/SysAclModuleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/service/SysAclModuleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/service/SysTreeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/service/SysTreeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SysAclModuleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SysAclModuleMapper.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -217,7 +224,7 @@
       <workItem from="1577642672170" duration="279000" />
       <workItem from="1577704911793" duration="16488000" />
       <workItem from="1577882160955" duration="9774000" />
-      <workItem from="1578015710778" duration="18509000" />
+      <workItem from="1578015710778" duration="23322000" />
     </task>
     <servers />
   </component>
