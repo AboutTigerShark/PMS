@@ -1,7 +1,17 @@
 package com.wb.model;
 
+import com.alibaba.druid.filter.AutoLoad;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
 import java.util.Date;
 
+@Builder
+@ToString
+@AllArgsConstructor
+@NoArgsConstructor
 public class SysAcl {
     private Integer id;
 

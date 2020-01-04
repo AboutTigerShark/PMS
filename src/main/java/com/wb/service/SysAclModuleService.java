@@ -9,10 +9,12 @@ import com.wb.param.AclModuleParam;
 import com.wb.util.BeanValidator;
 import com.wb.util.IpUtil;
 import com.wb.util.LevelUtil;
+import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.Date;
 
+@Service
 public class SysAclModuleService {
 
     @Resource
@@ -21,7 +23,7 @@ public class SysAclModuleService {
     public void save(AclModuleParam aclModuleParam){
         BeanValidator.check(aclModuleParam);
         if(checkExist(aclModuleParam.getParentId(), aclModuleParam.getName(), aclModuleParam.getId())){
-            throw new ParamException("同一蹭几下存在相同权限模块");
+            throw new ParamException("同一层级下存在相同权限模块");
         }
         SysAclModule aclModule = SysAclModule.builder()
                 .name(aclModuleParam.getName())
@@ -30,6 +32,7 @@ public class SysAclModuleService {
                 .status(aclModuleParam.getStatus())
                 .remark(aclModuleParam.getRemark())
                 .build();
+        aclModule.setLevel(LevelUtil.calculateLevel(getLevel(aclModuleParam.getParentId()), aclModuleParam.getParentId()));
         aclModule.setOperator(RequestHolder.getCurrentUser().getUsername());
         aclModule.setOperateIp(IpUtil.getRemoteIp(RequestHolder.getCurrentRequest()));
         aclModule.setOperateTime(new Date());

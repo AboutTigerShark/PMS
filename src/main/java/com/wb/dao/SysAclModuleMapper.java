@@ -1,6 +1,7 @@
 package com.wb.dao;
 
 import com.wb.model.SysAclModule;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -19,5 +20,11 @@ public interface SysAclModuleMapper {
 
     List<SysAclModule> getAllAclModule();
 
-    int countByNameAndParentId(Integer parentId, String aclModuleName, Integer Id);
+    int countByNameAndParentId(@Param("parentId") Integer parentId, @Param("name") String name, @Param("id") Integer id);
+
+    List<SysAclModule> getChildAclModuleListByLevel(@Param("level") String level);
+
+    void batchUpdateLevel(@Param("sysAclModuleList") List<SysAclModule> sysAclModuleList);
+
+    int countByParentId(@Param("aclModuleId") int aclModuleId);
 }

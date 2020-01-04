@@ -17,7 +17,7 @@ import javax.annotation.Resource;
 import java.util.List;
 
 @Controller
-@RequestMapping("/sys/dept")
+@RequestMapping("/sys/aclModule")
 @Slf4j
 public class SysAclModuleController {
 
