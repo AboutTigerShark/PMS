@@ -8,16 +8,11 @@
   <component name="ChangeListManager">
     <list default="true" id="72ddc271-89a6-4767-b9d2-380d79cefdce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/controller/SysAclController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/controller/SysAclController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/controller/SysAclModuleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/controller/SysAclModuleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/dao/SysAclMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/dao/SysAclMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/dao/SysAclModuleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/dao/SysAclModuleMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/model/SysAcl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/model/SysAcl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/param/AclParam.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/param/AclParam.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/dao/SysRoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/dao/SysRoleMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/model/SysRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/model/SysRole.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/service/SysAclModuleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/service/SysAclModuleService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/service/SysAclService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/service/SysAclService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SysAclMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SysAclMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SysAclModuleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SysAclModuleMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/util/BeanValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/util/BeanValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SysRoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SysRoleMapper.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -80,9 +75,12 @@
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\mycode\PMS\generator" />
-      <recent name="D:\mycode\PMS\src\main\webapp\WEB-INF" />
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\mycode\PMS\src\main\webapp\WEB-INF\views" />
+      <recent name="D:\mycode\PMS\src\main\webapp" />
+      <recent name="D:\mycode\PMS\src\main\resources\mapper" />
+      <recent name="D:\mycode\PMS\target\classes\com\wb\common" />
+      <recent name="D:\mycode\PMS\src\main\java\com\wb\model" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.wb.util" />
@@ -91,12 +89,9 @@
       <recent name="com.wb.param" />
       <recent name="com.wb.common" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\mycode\PMS\src\main\webapp\WEB-INF\views" />
-      <recent name="D:\mycode\PMS\src\main\webapp" />
-      <recent name="D:\mycode\PMS\src\main\resources\mapper" />
-      <recent name="D:\mycode\PMS\target\classes\com\wb\common" />
-      <recent name="D:\mycode\PMS\src\main\java\com\wb\model" />
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\mycode\PMS\generator" />
+      <recent name="D:\mycode\PMS\src\main\webapp\WEB-INF" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -226,7 +221,8 @@
       <workItem from="1577704911793" duration="16488000" />
       <workItem from="1577882160955" duration="9774000" />
       <workItem from="1578015710778" duration="23448000" />
-      <workItem from="1578137049575" duration="5040000" />
+      <workItem from="1578137049575" duration="5940000" />
+      <workItem from="1578191216838" duration="8509000" />
     </task>
     <servers />
   </component>

@@ -9,10 +9,13 @@ import com.wb.param.AclModuleParam;
 import com.wb.util.BeanValidator;
 import com.wb.util.IpUtil;
 import com.wb.util.LevelUtil;
+import org.apache.commons.collections.CollectionUtils;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 import java.util.Date;
+import java.util.List;
 
 @Service
 public class SysAclModuleService {
@@ -60,6 +63,28 @@ public class SysAclModuleService {
         after_update.setOperator(RequestHolder.getCurrentUser().getUsername());
         after_update.setOperateIp(IpUtil.getRemoteIp(RequestHolder.getCurrentRequest()));
         after_update.setOperateTime(new Date());
+
+        updateWithChild(before_update, after_update);
+    }
+
+    @Transactional
+    public void updateWithChild(SysAclModule before, SysAclModule after) {
+        String newLevelPrefix = after.getLevel();
+        String oldLevelPrefix = before.getLevel();
+        if (!after.getLevel().equals(before.getLevel())) {
+            List<SysAclModule> aclModuleList = sysAclModuleMapper.getChildAclModuleListByLevel(before.getLevel());
+            if (CollectionUtils.isNotEmpty(aclModuleList)) {
+                for (SysAclModule aclModule : aclModuleList) {
+                    String level = aclModule.getLevel();
+                    if (level.indexOf(oldLevelPrefix) == 0) {
+                        level = newLevelPrefix + level.substring(oldLevelPrefix.length());
+                        aclModule.setLevel(level);
+                    }
+                }
+                sysAclModuleMapper.batchUpdateLevel(aclModuleList);
+            }
+        }
+        sysAclModuleMapper.updateByPrimaryKeySelective(after);
     }
 
     public boolean checkExist(Integer parentId, String aclModuleName, Integer Id){
