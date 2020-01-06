@@ -18,7 +18,7 @@ public class AclModuleLevelDto extends SysAclModule { //继承后便有了SysAcl
 
     private List<AclModuleLevelDto> aclModuleList = Lists.newArrayList();
 
-//    private List<AclDto> aclList = Lists.newArrayList();
+    private List<AclDto> aclList = Lists.newArrayList();
 
     public static AclModuleLevelDto adapt(SysAclModule sysAclModule) {
         AclModuleLevelDto dto = new AclModuleLevelDto();

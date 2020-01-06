@@ -1,6 +1,7 @@
 package com.wb.dao;
 
 import com.wb.model.SysRole;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -20,4 +21,6 @@ public interface SysRoleMapper {
     List<SysRole> getAll();
 
     int countByName(String name, int id);
+
+    List<SysRole> getByIdList(@Param("idList") List<Integer> idList);
 }
