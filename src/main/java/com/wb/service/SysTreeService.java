@@ -70,6 +70,7 @@ public class SysTreeService {
             if(roleAclIdSet.contains(acl.getId())){
                 dto.setChecked(true);
             }
+            aclDtoList.add(dto);
         }
         return aclListToTree(aclDtoList);
     }

@@ -8,53 +8,18 @@
   <component name="ChangeListManager">
     <list default="true" id="72ddc271-89a6-4767-b9d2-380d79cefdce" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/controller/SysAclController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/controller/SysAclController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/controller/SysRoleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/controller/SysRoleController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/controller/SysUserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/controller/SysUserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/dao/SysRoleAclMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/dao/SysRoleAclMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/dao/SysRoleMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/dao/SysRoleMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/dao/SysRoleUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/dao/SysRoleUserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/dao/SysUserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/dao/SysUserMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/dto/AclDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/dto/AclDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/dto/AclModuleLevelDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/dto/AclModuleLevelDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/model/SysAcl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/model/SysAcl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/service/SysRoleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/service/SysRoleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/model/SysRoleAcl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/model/SysRoleAcl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/service/SysCoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/service/SysCoreService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/wb/service/SysTreeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/wb/service/SysTreeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SysRoleAclMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SysRoleAclMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/SysRoleUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/SysRoleUserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/controller/SysUserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/controller/SysUserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/dao/SysRoleAclMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/dao/SysRoleAclMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/dao/SysRoleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/dao/SysRoleMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/dao/SysRoleUserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/dao/SysRoleUserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/dto/AclDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/dto/AclDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/dto/AclModuleLevelDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/dto/AclModuleLevelDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/model/SysAcl$SysAclBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/model/SysAcl$SysAclBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/model/SysAcl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/model/SysAcl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/model/SysRole.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/model/SysRole.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/service/SysAclModuleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/service/SysAclModuleService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/service/SysTreeService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/service/SysTreeService$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/service/SysTreeService$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/service/SysTreeService$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/service/SysTreeService$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/service/SysTreeService$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/service/SysTreeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/service/SysTreeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/util/BeanValidator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/com/wb/util/BeanValidator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/mapper/SysRoleAclMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/mapper/SysRoleAclMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/mapper/SysRoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/mapper/SysRoleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/mapper/SysRoleUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/PMS/WEB-INF/classes/mapper/SysRoleUserMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wb/controller/SysUserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wb/controller/SysUserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wb/dao/SysRoleAclMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wb/dao/SysRoleAclMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wb/dao/SysRoleMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wb/dao/SysRoleMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wb/dao/SysRoleUserMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wb/dao/SysRoleUserMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wb/dto/AclDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wb/dto/AclDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wb/dto/AclModuleLevelDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wb/dto/AclModuleLevelDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wb/model/SysAcl$SysAclBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wb/model/SysAcl$SysAclBuilder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/wb/model/SysAcl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wb/model/SysAcl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/wb/service/SysTreeService$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wb/service/SysTreeService$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/wb/service/SysTreeService$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wb/service/SysTreeService$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/wb/service/SysTreeService$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wb/service/SysTreeService$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/wb/service/SysTreeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/wb/service/SysTreeService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SysRoleAclMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/SysRoleAclMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SysRoleMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/SysRoleMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/SysRoleUserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/SysRoleUserMapper.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -265,7 +230,7 @@
       <workItem from="1578015710778" duration="23448000" />
       <workItem from="1578137049575" duration="5940000" />
       <workItem from="1578191216838" duration="10026000" />
-      <workItem from="1578276764556" duration="8723000" />
+      <workItem from="1578276764556" duration="14127000" />
     </task>
     <servers />
   </component>

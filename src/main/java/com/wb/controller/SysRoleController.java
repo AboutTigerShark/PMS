@@ -54,6 +54,7 @@ public class SysRoleController {
     @ResponseBody
     public JsonData roleTree(@RequestParam("roleId") int roleId) {
         return JsonData.success(sysTreeService.roleTree(roleId));
+
     }
 
 }
