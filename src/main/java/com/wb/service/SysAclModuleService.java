@@ -2,6 +2,7 @@ package com.wb.service;
 
 import com.google.common.base.Preconditions;
 import com.wb.common.RequestHolder;
+import com.wb.dao.SysAclMapper;
 import com.wb.dao.SysAclModuleMapper;
 import com.wb.exception.ParamException;
 import com.wb.model.SysAclModule;
@@ -23,6 +24,12 @@ public class SysAclModuleService {
     @Resource
     private SysAclModuleMapper sysAclModuleMapper;
 
+    @Resource
+    private SysAclMapper sysAclMapper;
+
+    @Resource
+    private SysLogService sysLogService;
+
     public void save(AclModuleParam aclModuleParam){
         BeanValidator.check(aclModuleParam);
         if(checkExist(aclModuleParam.getParentId(), aclModuleParam.getName(), aclModuleParam.getId())){
@@ -40,6 +47,8 @@ public class SysAclModuleService {
         aclModule.setOperateIp(IpUtil.getRemoteIp(RequestHolder.getCurrentRequest()));
         aclModule.setOperateTime(new Date());
         sysAclModuleMapper.insertSelective(aclModule);
+
+        sysLogService.saveAclModuleLog(null, aclModule);
     }
 
 
@@ -65,6 +74,8 @@ public class SysAclModuleService {
         after_update.setOperateTime(new Date());
 
         updateWithChild(before_update, after_update);
+
+        sysLogService.saveAclModuleLog(before_update, after_update);
     }
 
     @Transactional
@@ -99,15 +110,15 @@ public class SysAclModuleService {
         return aclModule.getLevel();
     }
 
-//    public void delete(int aclModuleId) {
-//        SysAclModule aclModule = sysAclModuleMapper.selectByPrimaryKey(aclModuleId);
-//        Preconditions.checkNotNull(aclModule, "待删除的权限模块不存在，无法删除");
-//        if(sysAclModuleMapper.countByParentId(aclModule.getId()) > 0) {
-//            throw new ParamException("当前模块下面有子模块，无法删除");
-//        }
-//        if (sysAclMapper.countByAclModuleId(aclModule.getId()) > 0) {
-//            throw new ParamException("当前模块下面有用户，无法删除");
-//        }
-//        sysAclModuleMapper.deleteByPrimaryKey(aclModuleId);
-//    }
+    public void delete(int aclModuleId) {
+        SysAclModule aclModule = sysAclModuleMapper.selectByPrimaryKey(aclModuleId);
+        Preconditions.checkNotNull(aclModule, "待删除的权限模块不存在，无法删除");
+        if(sysAclModuleMapper.countByParentId(aclModule.getId()) > 0) {
+            throw new ParamException("当前模块下面有子模块，无法删除");
+        }
+        if (sysAclMapper.countByAclModuleId(aclModule.getId()) > 0) {
+            throw new ParamException("当前模块下面有用户，无法删除");
+        }
+        sysAclModuleMapper.deleteByPrimaryKey(aclModuleId);
+    }
 }

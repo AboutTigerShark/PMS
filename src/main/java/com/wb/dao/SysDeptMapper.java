@@ -25,4 +25,6 @@ public interface SysDeptMapper {
     void batchUpdateLevel(@Param("sysDeptList") List<SysDept> sysDeptList); //批量更新部门层级
 
     int countByNameAndParentId(@Param("parentId") int parentId, @Param("name") String name, @Param("id") int id);
+
+    int countByParentId(@Param("deptId") int deptId);
 }
