@@ -2,13 +2,16 @@ package com.wb.service;
 
 import com.google.common.collect.Lists;
 import com.google.common.collect.Sets;
+import com.wb.beans.LogType;
 import com.wb.common.RequestHolder;
+import com.wb.dao.SysLogMapper;
 import com.wb.dao.SysRoleUserMapper;
 import com.wb.dao.SysUserMapper;
 import com.wb.model.SysLogWithBLOBs;
 import com.wb.model.SysRoleUser;
 import com.wb.model.SysUser;
 import com.wb.util.IpUtil;
+import com.wb.util.JsonMapper;
 import org.apache.commons.collections.CollectionUtils;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -25,8 +28,8 @@ public class SysRoleUserService {
     private SysRoleUserMapper sysRoleUserMapper;
     @Resource
     private SysUserMapper sysUserMapper;
-//    @Resource
-//    private SysLogMapper sysLogMapper;
+    @Resource
+    private SysLogMapper sysLogMapper;
 
     public List<SysUser> getListByRoleId(int roleId) {
         List<Integer> userIdList = sysRoleUserMapper.getUserIdListByRoleId(roleId);
@@ -47,7 +50,7 @@ public class SysRoleUserService {
             }
         }
         updateRoleUsers(roleId, userIdList);
-//        saveRoleUserLog(roleId, originUserIdList, userIdList);
+        saveRoleUserLog(roleId, originUserIdList, userIdList);
     }
 
     @Transactional
@@ -66,16 +69,16 @@ public class SysRoleUserService {
         sysRoleUserMapper.batchInsert(roleUserList);
     }
 
-//    private void saveRoleUserLog(int roleId, List<Integer> before, List<Integer> after) {
-//        SysLogWithBLOBs sysLog = new SysLogWithBLOBs();
-//        sysLog.setType(LogType.TYPE_ROLE_USER);
-//        sysLog.setTargetId(roleId);
-//        sysLog.setOldValue(before == null ? "" : JsonMapper.obj2String(before));
-//        sysLog.setNewValue(after == null ? "" : JsonMapper.obj2String(after));
-//        sysLog.setOperator(RequestHolder.getCurrentUser().getUsername());
-//        sysLog.setOperateIp(IpUtil.getRemoteIp(RequestHolder.getCurrentRequest()));
-//        sysLog.setOperateTime(new Date());
-//        sysLog.setStatus(1);
-//        sysLogMapper.insertSelective(sysLog);
-//    }
+    private void saveRoleUserLog(int roleId, List<Integer> before, List<Integer> after) {
+        SysLogWithBLOBs sysLog = new SysLogWithBLOBs();
+        sysLog.setType(LogType.TYPE_ROLE_USER);
+        sysLog.setTargetId(roleId);
+        sysLog.setOldValue(before == null ? "" : JsonMapper.obj2String(before));
+        sysLog.setNewValue(after == null ? "" : JsonMapper.obj2String(after));
+        sysLog.setOperator(RequestHolder.getCurrentUser().getUsername());
+        sysLog.setOperateIp(IpUtil.getRemoteIp(RequestHolder.getCurrentRequest()));
+        sysLog.setOperateTime(new Date());
+        sysLog.setStatus(1);
+        sysLogMapper.insertSelective(sysLog);
+    }
 }

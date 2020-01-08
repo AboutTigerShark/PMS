@@ -6,13 +6,13 @@ import lombok.Setter;
 import java.util.HashMap;
 import java.util.Map;
 
-
+//用于规范接口定义,
 @Getter
 @Setter
 public class JsonData {
-    private boolean ret;
-    private String msg;
-    private Object data;
+    private boolean ret; //返回结果(true or false)
+    private String msg; //异常信息
+    private Object data; //返回给前台的数据
 
     public JsonData(boolean ret){
         this.ret = ret;

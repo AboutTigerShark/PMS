@@ -26,6 +26,9 @@ public class SysDeptService {
     @Resource
     private SysUserMapper sysUserMapper;
 
+    @Resource
+    private SysLogService sysLogService;
+
     //部门的创建
     public void save(DeptParam deptParam){
         BeanValidator.check(deptParam); //字段校验
@@ -44,6 +47,7 @@ public class SysDeptService {
             sysDept.setOperateTime(new Date());
             sysDeptMapper.insertSelective(sysDept);
 
+            sysLogService.saveDeptLog(null, sysDept);
         }
     }
 
@@ -67,6 +71,8 @@ public class SysDeptService {
             after_update.setOperateIp("127.0.0.1");
             after_update.setOperateTime(new Date());
             updateWithChild(before_update, after_update); //连同子部门一并修改
+
+            sysLogService.saveDeptLog(before_update, after_update);
         }
     }
 
